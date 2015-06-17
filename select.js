@@ -219,7 +219,10 @@
 			}
 
 			self.select[0].selectedIndex = index;
-
+			
+			//需要手懂触发select的change事件;
+			$(self.select[0]).trigger("change");
+			
 			self._value.html(st.html());
 
 			self.close();
